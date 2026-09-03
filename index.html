@@ -186,32 +186,38 @@ li{
 }
 .skills-row{
   display:flex;
-  align-items:flex-start;
-  gap:2mm;
+  align-items:center;
+  gap:1.25mm;
   margin-top:.75mm;
+  width:calc(100% + 34mm);
+  white-space:nowrap;
 }
 .skills-label{
   flex:0 0 auto;
-  padding-top:.45mm;
+  padding-top:0;
   color:var(--blue);
-  font-size:7.4pt;
+  font-size:7.2pt;
   font-weight:700;
   text-transform:uppercase;
-  letter-spacing:.35px;
+  letter-spacing:.3px;
 }
 .skills{
   display:flex;
-  flex-wrap:wrap;
-  gap:.75mm;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:.55mm;
+  white-space:nowrap;
 }
 .skill{
   display:inline-block;
-  padding:.65mm 1.35mm;
+  flex:0 0 auto;
+  white-space:nowrap;
+  padding:.5mm .95mm;
   border:1px solid #d8e6f0;
   border-radius:9px;
   background:var(--chip);
   color:#28506f;
-  font-size:7pt;
+  font-size:6.55pt;
   line-height:1;
 }
 .research-interest{
