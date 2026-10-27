@@ -1,116 +1,223 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Chenchen Wang CV</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chenchen Wang — Academic CV</title>
 <style>
-:root{
-  --blue:#0a5c96;
-  --ink:#1f252b;
-  --muted:#65717b;
-  --line:#d8e3eb;
-  --chip:#eef6fb;
-}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  max-width:920px;
-  margin:28px auto;
-  padding:30px 42px 38px;
-  color:var(--ink);
-  line-height:1.42;
-  background:#fff;
-  box-shadow:0 8px 30px rgba(0,0,0,.08);
-}
-h1{margin:0;color:var(--blue);font-size:31px;font-weight:500;letter-spacing:.2px}
-h2{
-  margin:26px 0 11px;
-  color:var(--blue);
-  font-size:20px;
-  font-weight:600;
-  padding-bottom:5px;
-  border-bottom:2px solid var(--blue);
-}
-p{margin:6px 0;font-size:14px}
-ul{margin:7px 0 13px 20px;padding:0}
-li{margin:4px 0;font-size:13.5px}
-a{color:var(--blue);text-decoration:none}
-.contact-line{color:var(--muted);margin:3px 0 18px;font-size:13px}
-.small{display:inline-block;color:var(--muted);font-size:12.5px;margin-top:3px}
-.project{
-  background:#fff;
-  border:1px solid var(--line);
-  border-left:4px solid var(--blue);
-  border-radius:8px;
-  padding:14px 16px 13px;
-  margin:0 0 14px;
-  box-shadow:0 2px 8px rgba(23,57,82,.05);
-}
-.project b:first-child{font-size:16px;color:#1f2b34}
-.project p{font-size:13.5px;line-height:1.42}
-.links{margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.links a{
-  display:inline-block;
-  padding:5px 9px;
-  border-radius:999px;
-  border:1px solid #cbdde9;
-  background:var(--chip);
-  color:var(--blue);
-  font-weight:700;
-  font-size:12px;
-}
-.tag{
-  display:inline-block;
-  padding:5px 9px;
-  margin:3px 3px 3px 0;
-  border:1px solid #d6e5ef;
-  border-radius:999px;
-  background:var(--chip);
-  color:#28516d;
-  font-size:11.5px;
-  line-height:1;
-}
-@media print{
-  body{max-width:none;margin:0;padding:12mm 14mm;box-shadow:none}
-  h2{page-break-after:avoid}
-  .project{break-inside:avoid}
-}
+  :root {
+    --blue:#0a5c96; --ink:#1f252b; --muted:#65717b;
+    --line:#d8e3eb; --chip:#eef6fb; --chip-border:#cbdde9;
+  }
+  * { box-sizing:border-box; }
+  html { background:#f4f7f9; }
+  body {
+    margin:28px auto; max-width:920px; padding:30px 42px 38px;
+    color:var(--ink); background:#fff;
+    font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:1.42;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+  }
+  header { margin:0 0 22px; }
+  h1 { color:var(--blue); font-size:31px; font-weight:500; letter-spacing:.2px; margin:0; line-height:1.2; }
+  .contact { color:var(--muted); margin:5px 0 18px; font-size:13px; }
+  .contact span { white-space:normal; }
+  .sep { padding:0 8px; color:#a2afb8; }
+  a { color:var(--blue); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  section { margin:0 0 24px; }
+  h2 {
+    margin:26px 0 11px; color:var(--blue); font-size:20px; font-weight:600;
+    padding:0 0 5px; border-bottom:2px solid var(--blue); line-height:1.2;
+    break-after:avoid;
+  }
+  h3 { color:#1f2b34; font-size:16px; line-height:1.35; margin:0 0 4px; }
+  p { margin:6px 0; font-size:14px; }
+  .entry { margin:0 0 14px; break-inside:avoid; }
+  .entryline { display:flex; align-items:baseline; gap:12px; }
+  .entryline h3 { flex:1; }
+  .date { margin-left:auto; white-space:nowrap; text-align:right; color:var(--muted); font-size:12.5px; font-style:normal; }
+  .meta { color:var(--muted); font-size:12.5px; margin:3px 0 7px; }
+  .label { font-weight:700; margin:7px 0 3px; }
+  ul { margin:7px 0 13px 20px; padding:0; }
+  li { margin:4px 0; font-size:13.5px; padding-left:0; }
+  li::before { content:none; }
+  .projects .entry {
+    background:#fff; border:1px solid var(--line); border-left:4px solid var(--blue);
+    border-radius:8px; padding:14px 16px 13px; margin:0 0 14px;
+    box-shadow:0 2px 8px rgba(23,57,82,.05);
+  }
+  .projects .entry h3 { font-size:16px; }
+  .projects .entry p { font-size:13.5px; line-height:1.42; }
+  .taglist { margin:7px 0 8px; }
+  .tag {
+    display:inline-block; padding:5px 9px; margin:3px 3px 3px 0;
+    border:1px solid #d6e5ef; border-radius:999px; background:var(--chip);
+    color:#28516d; font-size:11.5px; line-height:1.1; white-space:nowrap;
+  }
+  .projectlinks { margin-top:9px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:0; }
+  .projectlinks a {
+    display:inline-block; padding:6px 11px; border-radius:999px;
+    border:1px solid var(--chip-border); background:var(--chip);
+    color:var(--blue); font-weight:700; font-size:12px; text-decoration:none;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .projectlinks a:hover { background:#dceef8; border-color:#9fc6df; }
+  .skills p { margin:8px 0 12px; line-height:2.1; }
+  .skills strong { display:inline-block; margin-right:5px; }
+  @page { size:A4; margin:12mm; }
+  @media print {
+    html, body { background:#fff; }
+    body { max-width:none; margin:0; padding:12mm 14mm; box-shadow:none; font-size:12px; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    h2 { page-break-after:avoid; }
+    .projects .entry, .entry { break-inside:avoid; box-shadow:none; }
+    .projectlinks a { color:var(--blue); }
+  }
+  @media screen and (max-width:700px) {
+    body { width:100%; margin:0; padding:24px 18px 30px; }
+    .entryline { flex-wrap:wrap; gap:0 10px; }
+    .date { margin-left:0; }
+    h1 { font-size:28px; }
+    h2 { font-size:19px; }
+  }
 </style>
-</head><body>
-<h1>Chenchen Wang</h1>
-<p class="contact-line">wchenchen0808@gmail.com</p>
+</head>
+<body>
+<main class="page">
+<header>
+  <h1>CHENCHEN WANG</h1>
+  <div class="contact">
+    <span>Email: <a href="mailto:wchenchen0808@gmail.com">wchenchen0808@gmail.com</a></span><span class="sep">|</span>
+    <span>GitHub: <a href="https://github.com/cici-one">github.com/cici-one</a></span><span class="sep">|</span>
+    <span>Portfolio: <a href="https://cici-one.github.io/wangcc-CV">cici-one.github.io/wangcc-CV</a></span>
+  </div>
+</header>
 
+<section>
 <h2>Research Profile</h2>
-<p>MSc Computing graduate from Cardiff University with research experience in bioinformatics, phosphoproteomics, medical image segmentation, and biomedical AI. My recent work focuses on AI agents and multimodal systems for biomedical research and education, with particular interests in multimodal biomedical AI, medical image analysis, bioinformatics, and scientific AI agents.</p>
+<p>MSc Computing graduate from Cardiff University with Distinction. My research experience spans medical image segmentation and biomedical data analysis, complemented by hands-on expertise in AI system development. My research includes deep learning for abdominal CT segmentation and computational analysis of phosphoproteomic data from N-WASP-knockout breast cancer cells to investigate phosphorylation changes and their potential biological significance. I have also developed AI applications involving multimodal models, LLM-based agent collaboration, and research-oriented computational workflows. Building on this combination of biomedical research and AI development, I aim to develop multimodal AI methods that integrate medical imaging and clinical information for disease diagnosis and risk stratification.</p>
+</section>
 
+<section>
 <h2>Education</h2>
-<p><b>MSc Computing, Cardiff University, Distinction</b><br>Sep 2023 - Jan 2025<br>Master's dissertation mark: 80.<br><b>Selected modules:</b> Algorithms &amp; Data Structures, Data Visualisation, Software Engineering, Research &amp; Skills, and Computing Topics.</p>
+<div class="entry">
+  <div class="entryline"><h3>Cardiff University, Cardiff, United Kingdom</h3></div>
+  <div class="entryline"><div class="meta">MSc Computing &nbsp;|&nbsp; Distinction</div><div class="date">Sep 2023 – Dec 2024</div></div>
+  <ul>
+    <li>MSc dissertation mark: 80/100.</li>
+    <li>Selected modules: Algorithms and Data Structures, Data Visualisation, Software Engineering, Research and Skills, and Computing Topics.</li>
+  </ul>
+</div>
+</section>
 
-<h2>Research Experience &amp; Preprints</h2>
-<p><b>Bioinformatics Pipeline Development for Phosphoproteomics Data Analysis of N-WASP Regulated Breast Cancer Progression (Master’s Research Project)</b><br><span class="small">Final mark: 80</span></p>
-<ul><li>Analysed phosphoproteomics data from N-WASP knockout breast cancer cells.</li><li>Performed differential phosphorylation analysis, protein interaction analysis, and pathway enrichment using Python and R.</li></ul>
+<section>
+<h2>Research Experience</h2>
+<div class="entry">
+  <h3><span class="number">1.</span> Morphology-Aware Channel-Decoupled Mamba Network (MCDNet) for Medical Image Segmentation</h3>
+  <div class="meta">Primary Research Contributor &nbsp;|&nbsp; Manuscript in preparation</div>
+  <ul>
+    <li>Research contribution: Led literature review, problem formulation, architecture design, experimental evaluation, and result analysis.</li>
+    <li>Network architecture: Proposed a U-shaped Mamba network integrating morphology-aware local feature enhancement with channel-decoupled state-space modelling.</li>
+    <li>Methodological development: Designed the MCSS block for grouped channel processing and adaptive integration; developed MAEM using deformable convolutions and channel attention to adapt local feature extraction to anatomical variations.</li>
+    <li>Evaluation: On the Synapse abdominal CT dataset (30 cases, eight anatomical structures), achieved 81.61% mean DSC, outperforming VM-UNet and MedMamba by 0.53 and 0.94 percentage points, respectively.</li>
+  </ul>
+</div>
+<div class="entry">
+  <h3><span class="number">2.</span> Phosphoproteomics Analysis of N-WASP-Regulated Breast Cancer Progression</h3>
+  <div class="meta">MSc Dissertation &nbsp;|&nbsp; Cardiff University &nbsp;|&nbsp; Collaboration: Cardiff–China Medical Research Collaborative, School of Medicine</div>
+  <p>Conducted downstream computational analysis of phosphoproteomic data from N-WASP-knockout breast cancer cells to investigate phosphorylation changes and their potential biological significance.</p>
+  <ul>
+    <li>Applied statistical methods and false discovery rate (FDR) correction; used PCA and clustering to examine patterns in the data.</li>
+    <li>Performed functional annotation and pathway enrichment analyses to explore biological processes associated with observed changes.</li>
+    <li>Developed PhosphoViz, an interactive platform for exploring and visualising phosphoproteomic data.</li>
+    <li>Worked with a medical school doctoral researcher to interpret computational findings in their biological and experimental context.</li>
+  </ul>
+</div>
+</section>
 
-<p><b>Category and Morphology-Aware Channel-Decoupled Mamba Network for medical image segmentation</b></p>
-<ul><li>Proposed a category and morphology-aware channel-decopled mamba network to address overlapping structures, blurred boundaries, and large shape variations in chest X- ray anatomical structures segmentation.</li><li>Designed a category-aware channel- decouple state space module for independent modelling of different anatomical structures, together with a morphology-aware module using deformable convolution for local feature learning.</li><li>Evaluated the method on two medical image segmentation datasets and achieved SOTA performance.</li></ul>
-
+<section>
 <h2>Professional Experience</h2>
-<p><b>Chaoxing Group | Shanghai, China</b><br><b>Team Lead, AI Agent Centre (Headquarters Core Department)</b><br><span class="small">May 2025 - Present</span></p>
-<p>Chaoxing is a leading higher education technology company in China, providing universities with digital platforms and systems for teaching, research, and institutional management.</p>
-<ul><li>Lead a 13-person technical team in a headquarters-level AI Agent Centre while remaining directly involved in system architecture, AI agent design, and implementation.</li><li>Develop AI systems for university research, teaching, and management scenarios, including applications in medicine, engineering, and computer science.</li><li>Lead requirements analysis, workflow and tool design, LLM/MLLM integration, API development, deployment, and project delivery.</li></ul>
+<div class="entry">
+  <div class="entryline"><h3>Chaoxing Group — AI Agent Centre</h3><div class="date">May 2025 – Present</div></div>
+  <div class="meta">Team Lead &nbsp;|&nbsp; Shanghai, China</div>
+  <p class="label">Key Responsibilities</p>
+  <ul>
+    <li>Lead technical development of AI systems for medical schools, medical research institutions, and university partners, overseeing system design, implementation, and delivery for medical education and biomedical research.</li>
+    <li>Collaborate with university partners, including Peking University Health Science Center, Shanghai Jiao Tong University School of Medicine, Nanjing University of Chinese Medicine, and Fujian Medical University, to translate specialised requirements into AI applications.</li>
+    <li>Develop AI workflows integrating LLMs, multimodal models, retrieval-augmented generation, agent orchestration, API integrations, and full-stack deployment.</li>
+  </ul>
+  <p class="label">Selected Achievements</p>
+  <ul>
+    <li>Played a leading role in the initial conception and prototype development of NoahCoder, subsequently commercialised by Chaoxing as a subscription-based university product.</li>
+    <li>Contributed AI agent functionality and technical support to university teaching projects recognised in the Sixth National College Teachers' Teaching Innovation Competition, including projects at Zhejiang University, Chongqing Jiaotong University, Fujian Medical University, and Yangtze University.</li>
+    <li>Contributed to a Chongqing Jiaotong University project selected for the University Teaching AI Agents and Application Cases collection.</li>
+    <li>Obtained Chaoxing's G1 Intelligent Agent Builder certification, with one project selected among 12 internally recognised Best Agent cases.</li>
+  </ul>
+</div>
+</section>
 
-
+<section class="projects">
 <h2>Selected AI Projects</h2>
-<div class="project"><b>Clinical Research Workbench</b><br><span class="small">AI-assisted Biomedical Research Platform</span><div style="margin-top:6px"><span class="tag">AI Agents</span><span class="tag">LLMs / MLLMs</span><span class="tag">Biomedical Literature Retrieval</span><span class="tag">Workflow Design</span><span class="tag">API Integration</span></div><p>Developed an AI-assisted biomedical research platform for literature exploration, evidence discussion, research-trend analysis, and research-question development.</p><p><b>My contribution:</b> Designed and implemented the platform’s research-agent workflow, including hybrid intent routing, context-aware prompting, PubMed retrieval via NCBI E-utilities, optional Web of Science integration, hotspot analysis, paper discussion, topic development, and multimodal file analysis. Built the system with Next.js, TypeScript, server-side APIs, and streaming LLM interaction.</p><div class="links"><a href="https://github.com/cici-one/clinical-research-workbench">GitHub</a><a href="http://aicenter.sslibweb.com/clinical-research-workbench">Live Application</a></div></div>
+<div class="entry">
+  <h3><span class="number">1.</span> Clinical Research Workbench</h3>
+  <div class="meta">AI-Assisted Biomedical Research Platform &nbsp;|&nbsp; Lead Developer &nbsp;|&nbsp; Academic Collaboration</div>
+  <div class="taglist"><span class="tag">AI Agents</span><span class="tag">LLMs / MLLMs</span><span class="tag">Biomedical Literature Retrieval</span><span class="tag">Workflow Design</span><span class="tag">API Integration</span></div>
+  <p>Developed an AI-assisted biomedical research platform for literature exploration, evidence discussion, research trend analysis, research question development, and analysis of uploaded documents and images.</p>
+  <p class="label">My Contribution</p>
+  <ul>
+    <li>Led communication and requirements coordination with an academic team at Shanghai Jiao Tong University School of Medicine, translating biomedical research needs into AI-assisted workflows.</li>
+    <li>Designed the research-agent workflow, including hybrid intent routing, context-aware prompting, PubMed retrieval via NCBI E-utilities, optional Web of Science integration, hotspot analysis, paper discussion, and research topic development.</li>
+    <li>Integrated multimodal analysis of uploaded PDFs, documents, and images; built the application using Next.js, TypeScript, server-side APIs, and streaming LLM interactions.</li>
+  </ul>
+  <p class="projectlinks">GitHub: <a href="https://github.com/cici-one/clinical-research-workbench">GitHub</a> &nbsp;|&nbsp; Live application: <a href="https://aicenter.sslibweb.com/clinical-research-workbench">Live Application</a></p>
+</div>
+<div class="entry">
+  <h3><span class="number">2.</span> PT Clinical Reasoning Lab</h3>
+  <div class="meta">AI-Assisted Clinical Reasoning and Rehabilitation Training Platform &nbsp;|&nbsp; Lead Developer &nbsp;|&nbsp; Academic Collaboration</div>
+  <div class="taglist"><span class="tag">AI Agents</span><span class="tag">Prompt Engineering</span><span class="tag">Clinical Reasoning Workflows</span><span class="tag">LLM Evaluation</span><span class="tag">Role-based Interaction</span></div>
+  <p>Developed an AI-assisted platform for case-based physical therapy education, supporting simulated clinical encounters, structured rehabilitation reasoning, and learner assessment.</p>
+  <p class="label">My Contribution</p>
+  <ul>
+    <li>Collaborated with university educators to translate clinical teaching requirements into structured training workflows.</li>
+    <li>Led implementation of simulated-patient interactions and AI mentor guidance across history taking, functional assessment, clinical reasoning, rehabilitation planning, and reassessment.</li>
+    <li>Developed structured learning records, exportable training notes, and evaluation rubrics; built the platform using Next.js, React, TypeScript, and streaming LLM APIs.</li>
+  </ul>
+  <p class="projectlinks">GitHub: <a href="https://github.com/cici-one/pt-clinical-reasoning-lab">GitHub</a> &nbsp;|&nbsp; Live application: <a href="https://aicenter.sslibweb.com/pt-clinical-reasoning-lab">Live Application</a></p>
+</div>
+<div class="entry">
+  <h3><span class="number">3.</span> Zhuge Review Kit</h3>
+  <div class="meta">Multimodal AI-Assisted Architectural Design Review Platform &nbsp;|&nbsp; Lead Developer &nbsp;|&nbsp; Academic Collaboration</div>
+  <div class="taglist"><span class="tag">MLLMs / VLMs</span><span class="tag">Computer Vision</span><span class="tag">Image Generation</span><span class="tag">Web Retrieval</span><span class="tag">Structured Evaluation</span></div>
+  <p>Developed a multimodal AI platform for architectural design evaluation, structured feedback, reference retrieval, and design optimisation.</p>
+  <p class="label">My Contribution</p>
+  <ul>
+    <li>Designed a multimodal evaluation pipeline integrating visual understanding, architectural relevance checking, and seven-dimensional structured scoring with radar-chart visualisation and detailed critiques.</li>
+    <li>Developed improvement recommendations and review-result export, with optional architectural precedent retrieval and AI-generated design visualisations.</li>
+    <li>Built the platform using Next.js, TypeScript, multimodal model APIs, web search, and server-side image processing.</li>
+  </ul>
+  <p class="projectlinks">GitHub: <a href="https://github.com/cici-one/zhuge-review-kit">GitHub</a> &nbsp;|&nbsp; Live application: <a href="https://aicenter.sslibweb.com/zhuge-review-kit">Live Application</a></p>
+</div>
+<div class="entry">
+  <h3><span class="number">4.</span> NoahCoder — Natural-Language AI Application Development Platform</h3>
+  <div class="meta">Core Contributor &nbsp;|&nbsp; Chaoxing Group</div>
+  <div class="taglist"><span class="tag">AI Application Development</span><span class="tag">LLM Workflows</span><span class="tag">Prototype Development</span><span class="tag">Higher Education</span></div>
+  <p>Contributed to the early development of a platform enabling university educators to create customised AI applications through natural-language instructions.</p>
+  <p class="label">My Contribution</p>
+  <ul>
+    <li>Led initial prototype development, contributing to the early concept, core technical approach, and implementation.</li>
+    <li>Helped translate academic requirements into accessible AI development capabilities, including discussions with medical teaching teams interested in simulated-patient applications.</li>
+  </ul>
+  <p class="projectlinks">Official platform: <a href="https://zhiya.chaoxing.com/fable-ans-vue/agentPortal">Official Platform</a></p>
+</div>
+</section>
 
-<div class="project"><b>PT Clinical Reasoning Lab</b><br><span class="small">AI-assisted Physical Therapy Clinical Reasoning Platform</span><div style="margin-top:6px"><span class="tag">AI Agents</span><span class="tag">Prompt Engineering</span><span class="tag">Clinical Reasoning Workflows</span><span class="tag">LLM Evaluation</span><span class="tag">Role-based Interaction</span></div><p>Developed an AI-assisted platform for case-based physical therapy education, supporting simulated clinical encounters and structured rehabilitation reasoning.</p><p><b>My contribution:</b> Designed case-specific clinical reasoning workflows spanning history taking, functional assessment and mechanism analysis, rehabilitation planning, and reassessment. Implemented simulated-patient and AI mentor interactions using role- and phase-specific prompts, case-specific expert knowledge, and Socratic guidance. Developed structured learning records and case-specific evaluation rubrics to assess students’ reasoning across rehabilitation scenarios. Built the platform with Next.js, React, TypeScript, and streaming LLM APIs.</p><div class="links"><a href="https://github.com/cici-one/pt-clinical-reasoning-lab">GitHub</a><a href="https://aicenter.sslibweb.com/pt-clinical-reasoning-lab">Live Application</a></div></div>
-
-<div class="project"><b>Zhuge Review Kit</b><br><span class="small">Multimodal AI Design Review Platform</span><div style="margin-top:6px"><span class="tag">MLLMs / VLMs</span><span class="tag">Computer Vision</span><span class="tag">Image Generation</span><span class="tag">Web Retrieval</span><span class="tag">Structured Evaluation</span></div><p>Developed a multimodal AI platform for image-based design evaluation, structured feedback, reference retrieval, and design optimization.</p><p><b>My contribution:</b> Designed and implemented a multimodal evaluation pipeline covering image understanding, architecture relevance checking, seven-dimensional structured assessment, and design recommendations. Developed structured LLM outputs for quantitative evaluation, a retrieval-and-filtering workflow for architectural reference cases, and prompt-driven image-to-image optimization. Built the platform with Next.js, TypeScript, multimodal model APIs, web search, and server-side image processing.</p><div class="links"><a href="https://github.com/cici-one/zhuge-review-kit">GitHub</a><a href="https://aicenter.sslibweb.com/zhuge-review-kit">Live Application</a></div></div>
-
-<h2>Technical Skills</h2>
-<p><b>AI &amp; Machine Learning</b><br>
-<span class="tag">Deep Learning</span><span class="tag">Computer Vision</span><span class="tag">MLLMs / VLMs</span><span class="tag">LLMs</span><span class="tag">Prompt Engineering</span><span class="tag">AI Agents</span><span class="tag">Multi-Agent Systems</span><span class="tag">Retrieval-Augmented Generation (RAG)</span></p>
-
-<p><b>Biomedical &amp; Research Computing</b><br>
-<span class="tag">Bioinformatics</span><span class="tag">Phosphoproteomics</span><span class="tag">Pathway Enrichment</span><span class="tag">Protein Interaction Analysis</span><span class="tag">Biomedical Literature Retrieval</span></p>
-
-<p><b>Software &amp; AI Systems</b><br>
-<span class="tag">Python</span><span class="tag">R</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">REST APIs</span><span class="tag">Model Context Protocol (MCP)</span><span class="tag">Tool Integration</span><span class="tag">Workflow Design</span><span class="tag">Linux</span><span class="tag">Deployment</span></p>
-
-</body></html>
+<section class="skills">
+<h2>Technical and Research Skills</h2>
+<p><strong>Biomedical and Research Computing:</strong> Bioinformatics, phosphoproteomics, differential phosphorylation analysis, statistical analysis, FDR correction, PCA, clustering, protein interaction analysis, pathway enrichment, biomedical literature retrieval.</p>
+<p><strong>Deep Learning and Medical Image Analysis:</strong> Deep learning, computer vision, CNNs, Mamba/state-space models, medical image segmentation, network architecture design, experimental evaluation.</p>
+<p><strong>AI and Multimodal Systems:</strong> LLMs, MLLMs, VLMs, prompt engineering, AI agents, multi-agent systems, retrieval-augmented generation (RAG), workflow orchestration.</p>
+<p><strong>Programming and Data Analysis:</strong> Python, R, TypeScript, JavaScript, data preprocessing, data visualisation.</p>
+<p><strong>Software and Systems Development:</strong> Next.js, React, REST APIs, Model Context Protocol (MCP), tool integration, Linux, full-stack development, system deployment.</p>
+</section>
+</main>
+</body>
+</html>
